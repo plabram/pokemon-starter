@@ -6,8 +6,6 @@ const Card = ({ pokemon }) => {
     //  parent, 
     types } = pokemon
 
-  console.log(types[0].type.name)
-
   return (
     <div>
       <div>
