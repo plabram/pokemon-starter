@@ -1,18 +1,23 @@
 import React from 'react'
 
 const Card = ({ pokemon }) => {
-  const { id, img, name, parent, types } = pokemon
+
+  const { id, img, name,
+    //  parent, 
+    types } = pokemon
+
+  console.log(types[0].type.name)
 
   return (
     <div>
       <div>
         <p>Id / {id}</p>
-        <img src={img} alt={name} />
+        {/* <img src={img} alt={name} /> */}
       </div>
       <div>
         <h1>{name}</h1>
-        {types.map((type, index) => <p key={index}>{type}</p>)}
-        {parent ? <p>Evoluciona de {parent}</p> : null}
+        {types.map((type) => <p key={type.slot}>{type.type.name}</p>)}
+        {/* {parent ? <p>Evoluciona de {parent}</p> : null} */}
       </div>
     </div>
   )
