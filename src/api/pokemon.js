@@ -11,7 +11,6 @@ export const getPokemon = async (id) => {
       image: pokemonAsJson.sprites.other["official-artwork"].front_shiny,
       types: pokemonAsJson.types,
     };
-    console.log("Pokemon retrieved from API");
     return newPokemon;
   } catch (error) {
     console.log(error);

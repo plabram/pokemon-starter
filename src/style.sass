@@ -7,13 +7,16 @@ $medium-grey: #CFCFCA
 $dark-grey-with-alpha: #63636333
 $dark-grey: #636363
 $more-grey: #D0CDC9
+$black: #000000
 $main-font: "Ubuntu", sans-serif
 $large-font: 20px
 $medium-font: 12px
 $padding: 20px
 $small-padding: 10px
-$radius: 3px
+$tiny-padding: 3px
+$radius: $tiny-padding
 $shadow: 0px 2px 8px 0px $dark-grey-with-alpha
+$layout-breakpoint-small: 800px
 
 @import './components/_Card'
 @import './components/_Overlay'
@@ -34,14 +37,20 @@ main
 p
   font-weight: 300
   font-size: $medium-font
+  color: $black
 
 span
   font-weight: 300
   font-size: $medium-font
+  color: $black
 
 h1
   font-weight: 500
   font-size: $large-font
+  color: $black
+
+a
+  text-decoration: none
 
 .filter
   background: $accent-color
@@ -61,5 +70,11 @@ h1
 
 .pokemon-list
   display: grid
-  grid-template-columns: repeat(3, 1fr)
+  grid-template-columns: repeat(2, 1fr)
   gap: $padding
+
+@media (min-width: $layout-breakpoint-small)
+  .pokemon-list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: $padding

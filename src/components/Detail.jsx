@@ -18,12 +18,12 @@ const Detail = () => {
     getAndSetPokemon(name)
   }, [])
 
-  console.log(pokemon)
-
   return (
     <div className="pokemon-detail">
       {!loading ? <Card pokemon={pokemon} /> : null}
-      <Link to={"/"} className="home-back">Back to Home 🏡</Link>
+      <div className="home-back">
+        <Link to={"/"} >Back to Home 🏡</Link>
+      </div>
     </div>
   )
 }

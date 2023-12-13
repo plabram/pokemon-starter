@@ -11,7 +11,7 @@ function Home() {
 
   const getPokemons = async () => {
     const pokemonsFromApi = []
-    for (let id = 1; id <= 25; id++) {
+    for (let id = 1; id <= 30; id++) {
       const newPokemon = await getPokemon(id)
       pokemonsFromApi.push(newPokemon)
     }
