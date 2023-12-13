@@ -8,7 +8,6 @@ function Home() {
 
   const [pokemons, setPokemons] = useState([{}])
   const [loading, setLoading] = useState(true)
-  // const BASE_URL = "https://pokeapi.co/api/v2/pokemon/"
 
   const getPokemons = async () => {
     const pokemonsFromApi = []

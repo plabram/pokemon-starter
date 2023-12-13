@@ -71,6 +71,18 @@
   margin-bottom: -100px;
 }
 
+.pokemon-detail {
+  width: 75%;
+  aspect-ratio: 1/1;
+  margin: 20px auto;
+}
+
+.home-back {
+  display: block;
+  text-align: center;
+  margin: 20px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
