@@ -12,15 +12,17 @@ const Card = ({ pokemon }) => {
   }
 
   return (
-    <Link to={`/${name}`} className='card-container'>
-      <div>
-        <span className="id">ID / {id}</span>
-        <img src={image} alt={name} />
-      </div>
-      <div>
-        <h1>{capitaliseFirstLetter(name)}</h1>
-        {types.map((type) => <span className="type" key={type.slot}>{type.type.name.toUpperCase()}</span>)}
-        {/* {parent ? <p>Evoluciona de {parent}</p> : null} */}
+    <Link to={`/${name}`}>
+      <div className='card-container'>
+        <div>
+          <span className="id">ID / {id}</span>
+          <img src={image} alt={name} />
+        </div>
+        <div>
+          <h1>{capitaliseFirstLetter(name)}</h1>
+          {types.map((type) => <span className="type" key={type.slot}>{type.type.name.toUpperCase()}</span>)}
+          {/* {parent ? <p>Evoluciona de {parent}</p> : null} */}
+        </div>
       </div>
     </Link>
   )
