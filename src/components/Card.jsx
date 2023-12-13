@@ -6,17 +6,19 @@ const Card = ({ pokemon }) => {
     //  parent, 
     types } = pokemon
 
-  console.log(image)
+  const capitaliseFirstLetter = (word) => {
+    return word.charAt(0).toUpperCase() + word.slice(1)
+  }
 
   return (
-    <div>
+    <div className='card-container'>
       <div>
-        <p>Id / {id}</p>
+        <span className="id">ID / {id}</span>
         <img src={image} alt={name} />
       </div>
       <div>
-        <h1>{name}</h1>
-        {types.map((type) => <p key={type.slot}>{type.type.name}</p>)}
+        <h1>{capitaliseFirstLetter(name)}</h1>
+        {types.map((type) => <span className="type" key={type.slot}>{type.type.name.toUpperCase()}</span>)}
         {/* {parent ? <p>Evoluciona de {parent}</p> : null} */}
       </div>
     </div>

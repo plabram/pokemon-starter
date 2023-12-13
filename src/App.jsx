@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import "./style.css"
 import Card from './components/Card'
 import Filter from "./components/Filter"
+import { BottomOverlay, TopOverlay } from "./components/Overlay"
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
 
   const getPokemons = async () => {
     const pokemonsFromApi = []
-    for (let id = 1; id <= 20; id++) {
+    for (let id = 1; id <= 25; id++) {
       try {
         const response = await fetch(BASE_URL + id)
         const pokemonAsJson = await response.json()
@@ -35,12 +36,21 @@ function App() {
   }, [])
 
   return (
-    <section>
-      <Filter itemsToFilter={pokemons} setItemsToFilter={setPokemons} />
-      {!loading ? pokemons.map((pokemon, index) =>
-        <Card key={index} pokemon={pokemon} />
-      ) : console.log("loading")}
-    </section>
+    <>
+      <TopOverlay />
+      <main>
+        <section className="filter">
+          <Filter itemsToFilter={pokemons} setItemsToFilter={setPokemons} />
+        </section>
+        <section className="pokemon-list">
+          {!loading ? pokemons.map((pokemon, index) =>
+            <Card key={index} pokemon={pokemon} />
+          ) : console.log("loading")}
+        </section>
+      </main>
+      <BottomOverlay />
+
+    </>
   )
 }
 

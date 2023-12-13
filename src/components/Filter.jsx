@@ -22,7 +22,7 @@ const Filter = ({ itemsToFilter, setItemsToFilter }) => {
       type="text"
       value={value}
       onChange={handleChange}
-      placeholder='Type to search'
+      placeholder='Filtra pokemons por nombre...'
     />
   )
 }

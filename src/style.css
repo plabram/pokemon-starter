@@ -1,18 +1,128 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap");
-h1, p {
-  font-family: "Ubuntu", sans-serif;
+.card-container {
+  border: 1px solid #CFCFCA;
+  border-radius: 3px;
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+  background: white;
+}
+.card-container div:first-of-type {
+  background: #DFDFDF;
+}
+.card-container div:first-of-type .id {
+  font-weight: 300;
+  background-color: #D0CDC9;
+}
+.card-container div:first-of-type img {
+  width: 100px;
+  margin: auto;
+  display: block;
+}
+.card-container div:last-of-type {
+  margin: 10px;
+}
+.card-container div:last-of-type .type {
+  color: #636363;
+  border-radius: 3px;
+  border: 1px solid #CFCFCA;
+}
+
+.top-overlay .triangle-left {
+  width: 0;
+  height: 0;
+  border: 150px solid transparent;
+  border-top: 150px solid black;
+  border-bottom: 0;
+  position: fixed;
+  margin-left: -150px;
+  margin-top: -100px;
+}
+.top-overlay .triangle-right {
+  width: 0;
+  height: 0;
+  border: 150px solid transparent;
+  border-top: 150px solid black;
+  border-bottom: 0;
+  position: fixed;
+  margin-left: calc(100% - 150px);
+  margin-top: -100px;
+}
+
+.bottom-overlay {
+  justify-content: space-around;
+}
+.bottom-overlay .circle-left {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0;
+  margin-left: -100px;
+  margin-bottom: -100px;
+}
+.bottom-overlay .circle-right {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0;
+  margin-left: calc(100% - 100px);
+  margin-bottom: -100px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
 body {
   background: #FFE62C;
+  font-family: "Ubuntu", sans-serif;
+}
+
+main {
+  margin: 0 15% 0 15%;
 }
 
 p {
   font-weight: 300;
+  font-size: 12px;
+}
+
+span {
+  font-weight: 300;
+  font-size: 12px;
 }
 
 h1 {
   font-weight: 500;
+  font-size: 20px;
+}
+
+.filter {
+  background: #FFFCEC;
+  margin: 20px 0 20px 0;
+}
+.filter input {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  border: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  border-radius: 3px;
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+}
+.filter input::placeholder {
+  color: #CFCFCA;
+}
+
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,10 +1,17 @@
-const Overlay = () => {
+export const TopOverlay = () => {
   return (
-    <div className="overlay">
-      <span className="circle"></span>
-      <span className="circle"></span>
+    <div className="top-overlay">
+      <span className="triangle-left"></span>
+      <span className="triangle-right"></span>
     </div>
   )
 }
 
-export default Overlay
+export const BottomOverlay = () => {
+  return (
+    <div className="bottom-overlay">
+      <span className="circle-left"></span>
+      <span className="circle-right"></span>
+    </div>
+  )
+}
