@@ -12,7 +12,6 @@ const Detail = () => {
     const selectedPokemon = await getPokemon(name)
     setPokemon(selectedPokemon)
     setLoading(false)
-    console.log(selectedPokemon)
   }
 
   useEffect(() => {
@@ -24,7 +23,7 @@ const Detail = () => {
   return (
     <div className="pokemon-detail">
       {!loading ? <Card pokemon={pokemon} /> : null}
-      <Link to={"/"}>Back to Home 🏡</Link>
+      <Link to={"/"} className="home-back">Back to Home 🏡</Link>
     </div>
   )
 }
