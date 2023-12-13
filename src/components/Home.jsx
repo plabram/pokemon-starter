@@ -12,19 +12,6 @@ function Home() {
   const getPokemons = async () => {
     const pokemonsFromApi = []
     for (let id = 1; id <= 25; id++) {
-      // try {
-      //   const response = await fetch(BASE_URL + id)
-      //   const pokemonAsJson = await response.json()
-      //   const newPokemon = {
-      //     id: pokemonAsJson.id,
-      //     name: pokemonAsJson.name,
-      //     image: pokemonAsJson.sprites.other["official-artwork"].front_shiny,
-      //     types: pokemonAsJson.types,
-      //   }
-      //   pokemonsFromApi.push(newPokemon)
-      // } catch (error) {
-      //   console.log(error)
-      // }
       const newPokemon = await getPokemon(id)
       pokemonsFromApi.push(newPokemon);
     }
