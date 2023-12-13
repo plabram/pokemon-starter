@@ -1,29 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap");
 .card-container {
+  background: white;
   border: 1px solid #CFCFCA;
   border-radius: 3px;
   box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
-  background: white;
+  min-height: 240px;
+  min-width: 180px;
+  margin: auto;
 }
-.card-container div:first-of-type {
+.card-container .image-container {
   background: #DFDFDF;
+  position: relative;
+  text-align: center;
 }
-.card-container div:first-of-type .id {
+.card-container .image-container .id {
   font-weight: 300;
   background-color: #D0CDC9;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
-.card-container div:first-of-type img {
-  width: 100px;
-  margin: auto;
-  display: block;
+.card-container .image-container img {
+  max-width: 100px;
+  padding: 10px;
 }
-.card-container div:last-of-type {
+.card-container .text-container {
   margin: 10px;
 }
-.card-container div:last-of-type .type {
+.card-container .text-container .type {
   color: #636363;
   border-radius: 3px;
+  margin: 3px;
   border: 1px solid #CFCFCA;
+}
+.card-container .text-container .evolved {
+  border-left: 3px solid #636363;
+  margin-top: 10px;
+  padding-left: 3px;
+}
+.card-container .text-container .evolved p:last-child {
+  font-size: 20px;
 }
 
 .top-overlay .triangle-left {
@@ -72,15 +88,12 @@
 }
 
 .pokemon-detail {
-  width: 75%;
-  aspect-ratio: 1/1;
-  margin: 20px auto;
+  margin: 20px 15% 0 15%;
 }
-
-.home-back {
-  display: block;
+.pokemon-detail .home-back {
   text-align: center;
-  margin: 20px;
+  width: 100%;
+  margin: 20px 0 0 0;
 }
 
 * {
@@ -100,16 +113,23 @@ main {
 p {
   font-weight: 300;
   font-size: 12px;
+  color: #000000;
 }
 
 span {
   font-weight: 300;
   font-size: 12px;
+  color: #000000;
 }
 
 h1 {
   font-weight: 500;
   font-size: 20px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
 }
 
 .filter {
@@ -133,8 +153,16 @@ h1 {
 
 .pokemon-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+
+@media (min-width: 800px) {
+  .pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
