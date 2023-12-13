@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import "./App.css"
+import "./style.css"
 import Card from './components/Card'
 import Filter from "./components/Filter"
 
@@ -35,12 +35,12 @@ function App() {
   }, [])
 
   return (
-    <>
+    <section>
       <Filter itemsToFilter={pokemons} setItemsToFilter={setPokemons} />
       {!loading ? pokemons.map((pokemon, index) =>
         <Card key={index} pokemon={pokemon} />
       ) : console.log("loading")}
-    </>
+    </section>
   )
 }
 
