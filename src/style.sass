@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap')
+
+$primary-color: #FFE62C
+$font-stack: "Ubuntu", sans-serif
+
+%font-shared
+  font-family: $font-stack
+
+body
+  background: $primary-color
+
+p
+  @extend %font-shared
+  font-weight: 300
+
+h1
+  @extend %font-shared
+  font-weight: 500
