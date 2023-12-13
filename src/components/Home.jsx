@@ -8,6 +8,7 @@ function Home() {
 
   const [pokemons, setPokemons] = useState([{}])
   const [loading, setLoading] = useState(true)
+  const [filtered, setFiltered] = useState([{}])
 
   const getPokemons = async () => {
     const pokemonsFromApi = []
@@ -28,12 +29,16 @@ function Home() {
       <TopOverlay />
       <main>
         <section className="filter">
-          <Filter itemsToFilter={pokemons} setItemsToFilter={setPokemons} />
+          <Filter itemsToFilter={pokemons} setFilteredItems={setFiltered} />
         </section>
         <section className="pokemon-list">
-          {!loading ? pokemons.map((pokemon, index) =>
+          {(!loading && Object.keys(filtered[0]).length === 0) ? pokemons.map((pokemon, index) =>
             <Card key={index} pokemon={pokemon} />
-          ) : console.log("loading")}
+          ) :
+            (!loading && Object.keys(filtered[0]).length > 0) ? filtered.map((pokemon, index) =>
+              <Card key={index} pokemon={pokemon} />
+            ) :
+              console.log("loading")}
         </section>
       </main>
       <BottomOverlay />

@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 
-const Filter = ({ itemsToFilter, setItemsToFilter }) => {
+const Filter = ({ itemsToFilter, setFilteredItems }) => {
   const [value, setValue] = useState("")
 
   const filterItems = (searchTerm) => {
     const filteredItems = itemsToFilter.filter((item) =>
       item.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
-    setItemsToFilter(filteredItems);
+    filteredItems.length > 0 ? setFilteredItems(filteredItems) : setFilteredItems([{}])
   }
 
   const handleChange = (e) => {
     const inputValue = e.target.value;
-
+    console.log(inputValue)
     setValue(inputValue)
     filterItems(inputValue)
   }
