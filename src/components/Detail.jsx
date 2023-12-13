@@ -1,8 +1,14 @@
 import React from 'react'
+import { Link, useParams } from 'react-router-dom'
 
-const Detail = ({ name }) => {
+const Detail = () => {
+  const { name } = useParams()
+  console.log(name)
   return (
-    <div>{name}</div>
+    <div>
+      <div>{name}</div>
+      <Link to={"/"}>Back to Home 🏡</Link>
+    </div>
   )
 }
 
