@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 
-const Filter = ({ itemsToFilter, setFilteredItems }) => {
-  const [value, setValue] = useState("")
-
+const Filter = ({ itemsToFilter, setFilteredItems, value, setValue }) => {
   const filterItems = (searchTerm) => {
     const filteredItems = itemsToFilter.filter((item) =>
       item.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
-    filteredItems.length > 0 ? setFilteredItems(filteredItems) : setFilteredItems([{}])
+    filteredItems.length > 0 ? setFilteredItems(filteredItems) : setFilteredItems([])
   }
 
   const handleChange = (e) => {

@@ -6,9 +6,10 @@ import { getPokemon } from "../api/pokemon"
 
 function Home() {
 
-  const [pokemons, setPokemons] = useState([{}])
+  const [pokemons, setPokemons] = useState([])
   const [loading, setLoading] = useState(true)
-  const [filtered, setFiltered] = useState([{}])
+  const [filtered, setFiltered] = useState([])
+  const [value, setValue] = useState("")
 
   const getPokemons = async () => {
     const pokemonsFromApi = []
@@ -29,16 +30,23 @@ function Home() {
       <TopOverlay />
       <main>
         <section className="filter">
-          <Filter itemsToFilter={pokemons} setFilteredItems={setFiltered} />
+          <Filter
+            itemsToFilter={pokemons}
+            setFilteredItems={setFiltered}
+            value={value}
+            setValue={setValue} />
         </section>
         <section className="pokemon-list">
-          {(!loading && Object.keys(filtered[0]).length === 0) ? pokemons.map((pokemon, index) =>
-            <Card key={index} pokemon={pokemon} />
-          ) :
-            (!loading && Object.keys(filtered[0]).length > 0) ? filtered.map((pokemon, index) =>
+          {(!loading && filtered.length === 0 && !value) ?
+            pokemons.map((pokemon, index) =>
               <Card key={index} pokemon={pokemon} />
             ) :
-              console.log("loading")}
+            (!loading && filtered.length > 0) ? filtered.map((pokemon, index) =>
+              <Card key={index} pokemon={pokemon} />
+            ) :
+              (!loading && filtered.length === 0 && value) ?
+                <p>No results found.</p> :
+                console.log("loading")}
         </section>
       </main>
       <BottomOverlay />
