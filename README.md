@@ -16,7 +16,7 @@ Para ver el proyecto en marcha, tienes dos opciones:
 * GET pokemon por id: `/api/pokemon/:id`
 
 ## Información técnica
-### Stack:
+### 📚 Stack:
 * JavaScript
 * React
 * React Router
@@ -28,7 +28,7 @@ Para ver el proyecto en marcha, tienes dos opciones:
 * SASS
 * Netlify / Render
 
-### Decisiones:
+### ❓ Decisiones:
 * Filtrar en el front o el back?
   * Para un proyecto pequeño React (**frontend**) puede gestionar sin problemas el filtraje sin afectar al performance.
   * El backend está preparado para soporter filtraje con query params si se necesitara.
@@ -40,7 +40,7 @@ Para ver el proyecto en marcha, tienes dos opciones:
   * Sin embargo, **MongoDB** es perfectamente funcional, y el "equipo de desarrollo" (yo 😊) tiene mayor experiencia con ello (también con PostgreSQL, pero no se enseña en Adalab).
   * Para compensar se ha añadido un campo manual, `friendlyId`.
 
-### Out of scope
+### 🙅‍♀️ Out of scope
 Lo siguiente no se ha incluido por motivos del tiempo, pero podría ser interesante en el futuro. 
 No dudes en preguntarme cómo se realizaría.
 * Añadir el `friendlyId` a MongoDB de manera programática con Node.js
