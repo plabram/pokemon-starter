@@ -5,11 +5,8 @@ const mainRouter = require("./routes");
 const { setError } = require("./config/error");
 const app = express();
 
-console.log("check0");
-
 app.use("/api", mainRouter);
 
-console.log("check1");
 
 app.use("*", (req, res, next) => {
   return next(setError(404, "Not found"));
