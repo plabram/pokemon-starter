@@ -12,7 +12,7 @@ Para ver el proyecto en marcha, tienes dos opciones:
 
 ## Endpoints
 * GET todos los pokemon: `/api/pokemon/`
-    * Este endpoint soporta el uso de query params para filtrar por nombre. Por ejemplo, `/api/pokemon/?name=charmander` devolverá información sobre Charmander.
+    * Este endpoint soporta el uso de query params para filtrar por nombre. Es decir, `/api/pokemon/?name=charmander` devolverá información sobre Charmander.
 * GET pokemon por id: `/api/pokemon/:id`
 
 ## Información técnica
