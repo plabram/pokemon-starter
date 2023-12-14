@@ -42,7 +42,7 @@ Para ver el proyecto en marcha, tienes dos opciones:
 
 ### Out of scope
 Lo siguiente no se ha incluido por motivos del tiempo, pero podría ser interesante en el futuro. 
-¡No dudes en preguntarme cómo se realizaría!
+No dudes en preguntarme cómo se realizaría.
 * Añadir el `friendlyId` a MongoDB de manera programática con Node.js
 * Unit testing
 * Protección del servidor con rate limits, debounce, etc.
