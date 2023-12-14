@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config(); // Handle environment (secret) variables
 const express = require("express");
 require("./config/db");
 const mainRouter = require("./routes");
@@ -7,12 +7,10 @@ const app = express();
 
 app.use("/api", mainRouter);
 
-
 app.use("*", (req, res, next) => {
   return next(setError(404, "Not found"));
 });
 
-console.log("check2");
 app.use((error, req, res, next) => {
   return res
     .status(error.status || 500)
