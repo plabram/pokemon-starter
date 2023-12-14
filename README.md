@@ -33,8 +33,8 @@ Para ver el proyecto, tienes dos opciones:
   * Para un proyecto pequeño React (**frontend**) puede gestionar sin problemas el filtraje sin afectar al performance.
   * El backend está preparado para soporter filtraje con query params si se necesitara.
 * React o JavaScript "vanilla"?
-  * No es necesario usar **React** para un proyecto de este tamaño. Pero no supone ningún esfuerzo extra.
-  * Es probable que en el futuro vendrá bien por su legibilidad, modularidad, gestión de estados, etc.
+  * El proyecto usa React, aunque no es necesario para un proyecto de este tamaño.
+  * Si el proyecto creciera, React aportaría legibilidad, modularidad y gestión de estados.
 * MongoDB o MySQL?
   * MySQL habría sido una buena opción aquí debido al ID secuencial (1, 2, 3, 4, 5) que vemos en la interfaz.
   * Sin embargo, **MongoDB** es perfectamente funcional, y el "equipo de desarrollo" (yo 😊) tiene mayor experiencia con ello (también con PostgreSQL, pero no se enseña en Adalab).
