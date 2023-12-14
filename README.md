@@ -3,7 +3,7 @@
 ¡Bienvenid@ a PokeFiltro! Si eres fan de los pokemon, te alegrarás de saber que ahora puedes encontrar toda la información que necesitas sobre ellos en el mismo lugar. Y además, que este lugar es más eficaz que un ataque de relámpago ⚡️
 
 ## Instalación
-Para ver el proyecto, tienes dos opciones:
+Para ver el proyecto en marcha, tienes dos opciones:
 1. Descargar y arrancar en local el código de las dos ramas principales: [main-front](https://github.com/plabram/adalab/tree/main-front) | [main-back](https://github.com/plabram/adalab/tree/main-back)
 2. Visitar las siguientes webs: [frontend](https://pokemon-filters.netlify.app/) | [backend](https://pokeapi-backend-3bla.onrender.com/api/pokemon/)
 
