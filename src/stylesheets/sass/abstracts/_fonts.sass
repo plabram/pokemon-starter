@@ -1,0 +1,11 @@
+@use "colours" as c
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap')
+$main-font: "Ubuntu", sans-serif
+$font-m: 20px
+$font-s: 12px
+
+@mixin font-styling($weight: 300, $size: $font-s, $color: c.$black) 
+  font-weight: $weight
+  font-size: $size
+  color: $color
