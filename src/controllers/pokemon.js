@@ -5,8 +5,8 @@ const {
 
 const getAllPokemon = async (req, res, next) => {
   try {
-    const { filter } = req.query;
-    const Pokemons = await getAllPokemonFromDb(filter);
+    const { name } = req.query;
+    const Pokemons = await getAllPokemonFromDb(name);
     res.status(200).json({ data: Pokemons });
   } catch {
     return next(setError(400, "Can't find Pokemons"));
