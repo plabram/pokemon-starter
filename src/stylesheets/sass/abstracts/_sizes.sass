@@ -1,0 +1,16 @@
+@use "colours" as c
+
+// Size palette
+$m: 20px
+$s: 12px
+
+// Padding and shading
+$padding-m: $m
+$padding-s: $s
+$padding-xs: 3px
+$radius: $padding-xs
+$shadow: 0px $padding-xs 8px 0px c.$dark-grey-with-alpha
+
+@mixin rounded-corners($radius: $radius, $shadow: $shadow)
+  border-radius: $radius
+  box-shadow: $shadow

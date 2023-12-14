@@ -29,7 +29,7 @@ function Home() {
     <>
       <TopOverlay />
       <main>
-        <section className="filter">
+        <section className="filter-container">
           <Filter
             itemsToFilter={pokemons}
             setFilteredItems={setFiltered}

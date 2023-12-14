@@ -1,0 +1,41 @@
+@use "../abstracts" as *
+
+.card-container
+  @include rounded-corners
+  background: white
+  border: 1px solid $medium-grey
+  min-height: 240px
+  min-width: 180px
+
+.card-container:hover 
+  animation: shake 0.5s
+  animation-iteration-count: infinite
+
+.image-container
+  background: $light-grey
+  position: relative
+  text-align: center
+  span
+    font-weight: 300
+    background-color: $more-grey
+    padding: $padding-xs 
+    position: absolute
+    bottom: 0
+    left: 0
+  img
+    max-width: 100px
+    padding: $padding-s
+
+.text-container
+  margin: $padding-s
+  span
+    color: $dark-grey
+    margin: $padding-xs
+    border-radius: $radius
+    border: 1px solid $medium-grey
+  .evolved
+    border-left: $padding-xs solid $dark-grey
+    margin-top: $padding-s
+    padding-left: $padding-xs
+    p:last-child
+      font-size: $font-m

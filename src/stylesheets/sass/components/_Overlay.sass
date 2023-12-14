@@ -1,0 +1,34 @@
+$diameter: 100px
+
+@mixin triangle($margin-left: -(2*$diameter))
+  width: 0
+  height: 0
+  border: 2*$diameter solid transparent
+  border-top: 2*$diameter solid black
+  border-bottom: 0
+  position: fixed
+  margin-left: $margin-left
+  margin-top: -$diameter
+
+@mixin circle($margin-left: -$diameter)
+  height: 2*$diameter
+  width: 2*$diameter
+  background-color: red
+  border-radius: $diameter
+  position: fixed
+  bottom: 0
+  margin-left: $margin-left
+  margin-bottom: -$diameter
+
+.top-overlay
+  .triangle-left
+    @include triangle
+  .triangle-right
+    @include triangle($margin-left: calc(100% - (2*$diameter)))
+
+.bottom-overlay
+  justify-content: space-around
+  .circle-left
+    @include circle
+  .circle-right
+    @include circle($margin-left: calc(100% - $diameter))

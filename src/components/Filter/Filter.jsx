@@ -21,6 +21,7 @@ const Filter = ({ itemsToFilter, setFilteredItems, value, setValue }) => {
       value={value}
       onChange={handleChange}
       placeholder='Filtra pokemons por nombre...'
+      className="filter"
     />
   )
 }

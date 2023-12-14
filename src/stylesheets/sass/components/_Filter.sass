@@ -1,0 +1,13 @@
+@use "../abstracts" as *
+
+.filter
+  @include font-styling($size: $font-m)
+  @include rounded-corners
+  background: $accent-color
+  margin: $padding-m 0 $padding-m 0
+  padding: $padding-s 0 $padding-s 0
+  width: 100%
+  text-align: center
+  border: 0
+  &::placeholder
+    color: $medium-grey

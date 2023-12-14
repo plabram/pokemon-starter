@@ -1,0 +1,17 @@
+@use "../abstracts" as *
+
+@mixin grid($columns: 1)
+  display: grid
+  grid-template-columns: repeat($columns, 1fr)
+  gap: $padding-m
+
+.pokemon-list
+  @include grid
+
+@media (min-width: $layout-breakpoint-s)
+  .pokemon-list
+    @include grid($columns: 2)
+
+@media (min-width: $layout-breakpoint-m)
+  .pokemon-list
+    @include grid($columns: 3)
