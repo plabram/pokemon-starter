@@ -53,3 +53,5 @@ Lo siguiente no se ha incluido por motivos del tiempo, pero podría ser interesa
 * Pantalla de carga y de 404
 
 Que disfrutes del proyecto, y ¡hazte con todos!
+
+&copy; Penelope Labram 2023
