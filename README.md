@@ -39,6 +39,9 @@ Para ver el proyecto en marcha, tienes dos opciones:
   * MySQL habría sido una buena opción aquí debido al ID secuencial (1, 2, 3, 4, 5) que vemos en la interfaz.
   * Sin embargo, **MongoDB** es perfectamente funcional, y el "equipo de desarrollo" (yo 😊) tiene mayor experiencia con ello (también con PostgreSQL, pero no se enseña en Adalab).
   * Para compensar se ha añadido un campo manual, `friendlyId`.
+* ¿Comentar o no comentar?
+  * El uso excesivo de comentarios puede ser controvertido.
+  * Por motivos didácticos, el proyecto contiene muchos comentarios.
 
 ### 🙅‍♀️ Out of scope
 Lo siguiente no se ha incluido por motivos del tiempo, pero podría ser interesante en el futuro. 
