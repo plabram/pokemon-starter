@@ -8,7 +8,7 @@ Para ver el proyecto, tienes dos opciones:
 2. Visitar las siguientes webs: [frontend](https://pokemon-filters.netlify.app/) | [backend](https://pokeapi-backend-3bla.onrender.com/api/pokemon/)
 
 > [!TIP]
-> El backend usa environment variables. Tendrás que crear tu propio `MONGO_URL`(no dudes en pedir el mío) y subirlo a tu hosting.
+> El backend usa environment variables. Tendrás que crear un `MONGO_URL`(no dudes en pedir el mío) y subirlo a tu hosting.
 
 ## Endpoints
 * GET todos los pokemon: `/api/pokemon/`
