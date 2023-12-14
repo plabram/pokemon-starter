@@ -1,5 +1,4 @@
 const express = require("express");
-
 const pokemonRouter = require("./pokemon");
 
 const router = express.Router();

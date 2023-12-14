@@ -5,7 +5,7 @@ const {
 
 const getAllPokemon = async (req, res, next) => {
   try {
-    const { name } = req.query;
+    const { name } = req.query; // name is optional
     const Pokemons = await getAllPokemonFromDb(name);
     res.status(200).json({ data: Pokemons });
   } catch {

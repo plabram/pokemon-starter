@@ -3,7 +3,7 @@ const { Pokemon } = require("../models/mongo");
 const getAllPokemonFromDb = async (filter) => {
   try {
     const nameFilterOptions = {
-      name: { $regex: new RegExp(filter, "i") },
+      name: { $regex: new RegExp(filter, "i") }, // Do a case-insensitive search for filter
     };
     const Pokemons = await Pokemon.find(filter ? nameFilterOptions : {});
     return Pokemons;
