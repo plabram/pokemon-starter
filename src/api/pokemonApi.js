@@ -48,7 +48,7 @@ export const getAscendant = async (name) => {
       const ascendant = evolutionData.chain.evolves_to[0].species.name;
       return ascendant;
     } else {
-      // No ascendant found
+      // In case no ascendant found
       return null;
     }
   } catch (error) {

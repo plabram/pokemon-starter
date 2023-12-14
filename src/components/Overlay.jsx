@@ -4,8 +4,8 @@ export const TopOverlay = () => {
       <span className="triangle-left"></span>
       <span className="triangle-right"></span>
     </div>
-  )
-}
+  );
+};
 
 export const BottomOverlay = () => {
   return (
@@ -13,5 +13,5 @@ export const BottomOverlay = () => {
       <span className="circle-left"></span>
       <span className="circle-right"></span>
     </div>
-  )
-}
+  );
+};
