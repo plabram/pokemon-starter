@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getAscendant } from "../../api/pokemon"
+import { capitaliseFirstLetter } from '../../utils/utils'
 
 const Card = ({ pokemon }) => {
 
@@ -19,9 +20,7 @@ const Card = ({ pokemon }) => {
 
   const { id, image, name, types } = pokemon
 
-  const capitaliseFirstLetter = (word) => {
-    return word.charAt(0).toUpperCase() + word.slice(1)
-  }
+
 
   return (
     <Link to={`/${name}`} >
