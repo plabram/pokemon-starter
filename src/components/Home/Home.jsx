@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import Card from './Card'
-import Filter from "./Filter"
-import { BottomOverlay, TopOverlay } from "./Overlay"
-import { getPokemon } from "../api/pokemon"
+import Card from '../Card/Card'
+import Filter from "../Filter/Filter"
+import { BottomOverlay, TopOverlay } from "../Overlay/Overlay"
+import { getPokemon } from "../../api/pokemon"
 
 function Home() {
 
