@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { getPokemon } from '../api/pokemon'
-import Card from './Card'
+import { getPokemon } from "../../api/pokemon"
+import Card from '../Card/Card'
 
 const Detail = () => {
   const { name } = useParams()

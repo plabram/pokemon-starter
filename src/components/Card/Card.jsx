@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getAscendant } from "../api/pokemon"
+import { getAscendant } from "../../api/pokemon"
 
 const Card = ({ pokemon }) => {
 

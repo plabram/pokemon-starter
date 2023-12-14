@@ -1,0 +1,26 @@
+.filter
+  background: $accent-color
+  margin: $padding 0 $padding 0
+  input
+    width: 100%
+    text-align: center
+    padding: $small-padding 0 $small-padding 0
+    border: 0
+    font-family: $main-font
+    font-weight: 300
+    font-size: $large-font
+    border-radius: $radius
+    box-shadow: $shadow
+    &::placeholder
+      color: $medium-grey
+
+.pokemon-list
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: $padding
+
+@media (min-width: $layout-breakpoint-small)
+  .pokemon-list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: $padding

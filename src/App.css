@@ -136,6 +136,38 @@
   margin: 20px 0 0 0;
 }
 
+.filter {
+  background: #FFFCEC;
+  margin: 20px 0 20px 0;
+}
+.filter input {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  border: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  border-radius: 3px;
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+}
+.filter input::placeholder {
+  color: #CFCFCA;
+}
+
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 800px) {
+  .pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -172,37 +204,4 @@ a {
   text-decoration: none;
 }
 
-.filter {
-  background: #FFFCEC;
-  margin: 20px 0 20px 0;
-}
-.filter input {
-  width: 100%;
-  text-align: center;
-  padding: 10px 0 10px 0;
-  border: 0;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  border-radius: 3px;
-  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
-}
-.filter input::placeholder {
-  color: #CFCFCA;
-}
-
-.pokemon-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-@media (min-width: 800px) {
-  .pokemon-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=App.css.map */
