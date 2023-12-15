@@ -54,6 +54,7 @@ No dudes en preguntarme cómo se realizaría.
   * Memoization
   * Pagination de los resultados del servidor
 * Pantalla de carga y de 404
+* Subida de imagenes a un servicio externo (tipo Cloudinary)
 
 Que disfrutes del proyecto, y ¡hazte con todos!
 
