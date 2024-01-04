@@ -1,61 +1,39 @@
-# "PokeFiltro" - Prueba Técnica Adalab
+# Pokemon Starter
 
-¡Bienvenid@ a PokeFiltro! Si eres fan de los pokemon, te alegrarás de saber que ahora puedes encontrar toda la información que necesitas sobre ellos en el mismo lugar. Y además, que este lugar es más eficaz que un ataque de relámpago ⚡️
+Welcome to Pokemon Starter! This project is a starter package for getting projects off the ground quickly and showing others how to create commonly used functionality. 
 
-## Instalación
-Para ver el proyecto en marcha, tienes dos opciones:
-1. Descargar y arrancar en local el código de las dos ramas principales: [main-front](https://github.com/plabram/adalab/tree/main-front) | [main-back](https://github.com/plabram/adalab/tree/main-back)
-2. Visitar las siguientes webs: [frontend](https://pokemon-filters.netlify.app/) | [backend](https://pokeapi-backend-3bla.onrender.com/api/pokemon/)
+It's most suitable for eCommerce style projects that use the functionality below. I used the pokemon API for demonstration purposes, but it could be linked to any API with similar organization.
+
+Features:
+* Central list page showing all products
+* Detail page for each product
+* Search bar
+* Animation
+* Creative styling
+* Fully responsive
+* Full of comments to support teaching and learning
+
+## Installing
+To work with this code, you'll need both main branches: [main-front](https://github.com/plabram/adalab/tree/main-front) | [main-back](https://github.com/plabram/adalab/tree/main-back)
 
 > [!TIP]
-> El backend usa environment variables. Tendrás que crear un `MONGO_URL`(no dudes en pedir el mío sino) y subirlo a tu hosting.
+> The backend uses environment variables. You'll need to create a `MONGO_URL`.
 
 ## Endpoints
-* GET todos los pokemon: `/api/pokemon/`
-    * Este endpoint soporta el uso de query params para filtrar por nombre. Es decir, `/api/pokemon/?name=charmander` devolverá información sobre Charmander.
-* GET pokemon por id: `/api/pokemon/:id`
+* GET all pokemon: `/api/pokemon/`
+    * You can use query params with this endpoint to filter by name. For example, `/api/pokemon/?name=charmander` will get information about Charmander.
+* GET pokemon by id: `/api/pokemon/:id`
 
-## Información técnica
-### 📚 Stack:
+## 📚 Stack:
 * JavaScript
 * React
 * React Router
+* SASS
 * Node.js
 * Express
 * MongoDB
 * Mongoose
 * [Dotenv](https://www.npmjs.com/package/dotenv)
-* SASS
 * Netlify / Render
-
-### ❓ Decisiones:
-* Filtrar en el front o el back?
-  * Para un proyecto pequeño React (**frontend**) puede gestionar sin problemas el filtraje sin afectar al performance.
-  * El backend está preparado para soporter filtraje con query params si se necesitara.
-* React o JavaScript "vanilla"?
-  * El proyecto usa React, aunque no es necesario para un proyecto de este tamaño.
-  * Si el proyecto creciera, React aportaría legibilidad, modularidad y gestión de estados.
-* MongoDB o MySQL?
-  * MySQL habría sido una buena opción aquí debido al ID secuencial (1, 2, 3, 4, 5) que vemos en la interfaz.
-  * Sin embargo, **MongoDB** es perfectamente funcional, y el "equipo de desarrollo" (yo 😊) tiene mayor experiencia con ello (también con PostgreSQL, pero no se enseña en Adalab).
-  * Para compensar se ha añadido un campo manual, `friendlyId`.
-* ¿Comentar o no comentar?
-  * El uso excesivo de comentarios puede ser controvertido.
-  * Por motivos didácticos, el proyecto contiene muchos comentarios.
-
-### 🙅‍♀️ Out of scope
-Lo siguiente no se ha incluido por motivos del tiempo, pero podría ser interesante en el futuro. 
-No dudes en preguntarme cómo se realizaría.
-* Añadir el `friendlyId` a MongoDB de manera programática con Node.js
-* Unit testing
-* Protección del servidor con rate limits, debounce, etc.
-* Performance:
-  * Lazy loading
-  * Memoization
-  * Pagination de los resultados del servidor
-* Pantalla de carga y de 404
-* Subida de imagenes a un servicio externo (tipo Cloudinary)
-
-Que disfrutes del proyecto, y ¡hazte con todos!
 
 &copy; Penelope Labram 2023
